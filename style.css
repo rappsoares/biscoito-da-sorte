@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+
+  font-size: 1.6rem;
+  background: linear-gradient(45deg, #190361 0%, #b0f 100%);
+}
+
+main {
+  width: min(42.8rem, 100%);
+  padding: 4.8rem 6.4rem 6.4rem;
+  text-align: center;
+
+  border-radius: 0.5rem;
+  background: white;
+  box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.8);
+  margin-top: -12rem;
+}
+
+button {
+  font-family: "DM Sans", sans-serif;
+  border: none;
+}
+
+.hide {
+  display: none;
+}
+
+h1,
+p {
+  color: #34355b;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* SCREEN 1 */
+.screen1 button {
+  background: none;
+  cursor: pointer;
+}
+
+.screen1 button:hover {
+  animation: shake 0.3ms ease-in 0.3ms infinite alternate;
+}
+
+.screen1 p {
+  margin: 1.4rem 0 2rem;
+}
+
+/* SCREEN 2 */
+.luck {
+  background: #e4edf1;
+  box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.5);
+  margin: 1.7rem 0 6rem;
+
+  animation: appear 2s ease-out forwards;
+}
+
+.luck p {
+  padding: 1rem;
+}
+
+.screen2 button {
+  cursor: pointer;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: normal;
+
+  padding: 1.6rem;
+  margin-top: 5.9rem;
+
+  border-radius: 0.4rem;
+  background: #ff9500;
+}
+
+@keyframes shake {
+  from {
+    transform: rotate(2deg);
+  }
+  to {
+    transform: rotate(-2deg);
+    transform-origin: center center;
+  }
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(250%) scale(0.2);
+  }
+  65% {
+    transform: translateY(0) scale(1);
+  }
+}
